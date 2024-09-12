@@ -1,5 +1,5 @@
 h1 {
-    color: green;
+    color: rgb(57, 176, 255);
     font-size: 24px;
     text-align: center;
 } /* fim h1 */
@@ -32,6 +32,7 @@ ul li {
     text-align: center;
     margin-bottom: 4px;
 }
+
 .texto-simples {
     text-align: justify;
     font-size: 12pt;
@@ -43,5 +44,5 @@ ul li {
 }
 
 .botao-secundario {
-    background-color: rgb(121, 121, 192);
+    background-color: rgb(193, 192, 192);
 }
