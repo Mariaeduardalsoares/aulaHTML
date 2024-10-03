@@ -1,10 +1,13 @@
-from flask import Flask
+from flask import (Flask,request)
 
 app = Flask(__name__)
 
 @app.route("/", methods=('GET',))
 def index():
-    return "<h1>Página inicial</h1><p>Eu sou Batman</p>"
+    nome = request.args.get('Nome')
+    return f""" <h1>Página inicial</h1>
+    <p>Olá {nome}, que nome bonito!
+    """
 
 @app.route("/galeria", methods=('GET',))
 def galeria():
@@ -17,5 +20,3 @@ def contato():
 @app.route("/sobre", methods=('GET',))
 def sobre():
     return "<h1>Sobre</h1><p>Saiba mais sobre nós!</p>"
-
-
