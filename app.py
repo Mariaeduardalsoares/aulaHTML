@@ -21,13 +21,17 @@ def contato():
 def sobre():
     return "<h1>Sobre</h1><p>Saiba mais sobre nós!</p>"
 
-@app.route("/area")
-def area():
-    altura= float(request.args.get('a'))
-    largura= float(request.args.get('l'))
+
+
+
+
+
+@app.route("/area/<float:altura>/<float:largura>" , methods=("GET",))
+def area(largura, altura):
+    
     return f"""<h1> A área informada> L={largura}* A={altura} => Area={largura*altura} <h1>"""
 
-@app.route("/parimpar", methods=('GET',))
+@app.route("/parimpar/<float:numero>", methods=('GET',))
 def parimpar():
   numero = float(request.args.get('n'))
   if numero % 2 == 0:
