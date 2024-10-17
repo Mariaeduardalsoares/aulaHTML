@@ -45,3 +45,9 @@ def nomesob():
   sobrenome = request.args.get('sobrenome')
   return f"""<h1> Sobrenome </h1>
   <p>{sobrenome},{nome}</p>"""
+
+
+
+@app.route("/potencia/<float:numero>/<float:elevado>", methods=('GET',))
+def potencia(numero: float, elevado: float):
+    return f"""<h1>A potencia é> N={numero}* E={elevado} => Potencia={numero*elevado}</h1>"""
