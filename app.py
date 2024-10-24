@@ -57,5 +57,5 @@ def potencia(numero: float, elevado: float):
 def tabuada(numero = None):
    
     if 'numero' in request.args:
-        numero = request.args.get('numero')
+        numero =int (request.args.get('numero'))
     return render_template('tabuada.html', numero=numero)
