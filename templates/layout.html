@@ -6,8 +6,50 @@
     <title>Meu site</title>
 </head>
 <body>
-    {% block content %}
-    {% endblock %}
+    <ul>Menu
+        <li><a href="/">Index</a></li>
+        <li><a href="/contato">Contato</a></li>
+        <li><a href="/tabuada">Tabuada</a></li>
+
+    </ul>
+    <h1>Cálculo de Juros</h1>
+    <form method="GET">
+        <label for="investimento">Investimento Inicial (R$):</label>
+        <input type="number" id="investimento" name="investimento" required><br>
+
+        <label for="juros">Juros ao Ano (%):</label>
+        <input type="number" id="juros" name="juros" step="0.01" required><br>
+
+        <label for="tempo">Tempo de Investimento (meses):</label>
+        <input type="number" id="tempo" name="tempo" required><br>
+
+        <label for="contribuicao">Contribuições Mensais (R$):</label>
+        <input type="number" id="contribuicao" name="contribuicao" required><br>
+
+        <button type="submit">Calcular</button>
+    </form>
+
+    <h1>Login</h1>
+    <form method="POST">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required><br>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <h1>Calculadora de IMC</h1>
+    <form method="POST">
+        <label for="peso">Peso (kg):</label>
+        <input type="number" id="peso" name="peso" step="0.1" required><br>
+
+        <label for="altura">Altura (m):</label>
+        <input type="number" id="altura" name="altura" step="0.01" required><br>
+
+        <button type="submit">Calcular IMC</button>
+    </form>
     
 </body>
 </html>
